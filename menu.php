@@ -38,11 +38,9 @@ if($PASSWORD) {
 	}
 }
 
-$tmp_dir = dirname('/var/www/html/info.php');
-echo "tmp_dir: $tmp_dir\n";
+$tmp_dir = dirname($_SERVER['SCRIPT_FILENAME']);
 if(DIRECTORY_SEPARATOR==='\\') $tmp_dir = str_replace('/',DIRECTORY_SEPARATOR,$tmp_dir);
 $tmp = get_absolute_path($tmp_dir . '/' .$_REQUEST['file']);
-echo "tmp: $tmp\n";
 
 if($tmp === false)
 	err(404,'File or Directory Not Found');
