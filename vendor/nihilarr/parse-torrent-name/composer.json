@@ -1,0 +1,24 @@
+{
+    "name": "nihilarr/parse-torrent-name",
+    "type": "library",
+    "description": "Extract media information from torrent-like filename",
+    "keywords": ["library","parse","parser","torrent","ptn"],
+    "homepage": "https://gitlab.com/nihilarr/parse-torrent-name",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Drew Smith",
+            "homepage": "https://www.nihilarr.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nihilarr\\": "PTN/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

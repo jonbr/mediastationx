@@ -1,0 +1,7 @@
+{
+    "require": {
+        "captioning/captioning": "2.*",
+        "nihilarr/parse-torrent-name": "^0.0.1",
+        "matriphe/iso-639": "^1.2"
+    }
+}

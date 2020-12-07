@@ -1,0 +1,878 @@
+{
+    "headline": "Home Media Server",
+    "menu": [
+        {
+            "icon": "movie",
+            "label": "Movies",
+            "data": {
+                "type": "list",
+                "template": {
+                    "type": "separate",
+                    "layout": "0,0,2,4"
+                },
+                "items": [
+                    {
+                        "title": "Ace Ventura: Pet Detective",
+                        "image": "https://image.tmdb.org/t/p/w500/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg",
+                        "tag": "{ico:star}6.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Ace Ventura: Pet Detective",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Ace%20Ventura%3A%20Pet%20Detective%20(1994)%20%5B1080p%5D/Ace.Ventura%3A.Pet.Detective.1994.1080p.BluRay.x264.YIFY.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Anchorman: The Legend of Ron Burgundy",
+                        "image": "https://image.tmdb.org/t/p/w500/9rQceSyOxJpOVsJRhkgoxNqbkvA.jpg",
+                        "tag": "{ico:star}6.7",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Anchorman: The Legend of Ron Burgundy",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Anchorman%20The%20Legend%20Of%20Ron%20Burgundy%20(2004)%20%5B1080p%5D/Anchorman.The.Legend.Of.Ron.Burgundy.2004.1080p.BrRip.x264.BOKUTOX.YIFY.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Bad Santa",
+                        "image": "https://image.tmdb.org/t/p/w500/dt30keB9txHjYXuMzrqv6uJ499B.jpg",
+                        "tag": "{ico:star}6.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Bad Santa",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Bad%20Santa%202003%20Extended.1080p.BluRay%205.1.x264%20.%20NVEE/Bad%20Santa%202003.Extended.1040p.BluRay.5.1.x264%20.%20NVEE.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Beverly Hills Cop",
+                        "image": "https://image.tmdb.org/t/p/w500/2O0KSDef3gRuoOswd9HCv0HSfXL.jpg",
+                        "tag": "{ico:star}7.2",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Beverly Hills Cop",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Beveryly%20Hills%20Cop%20(1984)%20%5B1080p%5D/Beverly.Hills.Cop.1984.1080p.BrRip.x264.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Beveryly%20Hills%20Cop%20(1984)%20%5B1080p%5D/Beverly.Hills.Cop.1984.1080p.BrRip.x264.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Diego Maradona",
+                        "image": "https://image.tmdb.org/t/p/w500/3eBZxi0xcXBnEYq4m4YTVf0eHWX.jpg",
+                        "tag": "{ico:star}7.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Diego Maradona",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Diego%20Maradona%20(2019)%20%5BBluRay%5D%20%5B1080p%5D%20%5BYTS.LT%5D/Diego.Maradona.2019.1080p.BluRay.x264-%5BYTS.LT%5D.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Do the Right Thing",
+                        "image": "https://image.tmdb.org/t/p/w500/63rmSDPahrH7C1gEFYzRuIBAN9W.jpg",
+                        "tag": "{ico:star}7.8",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Do the Right Thing",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Do%20the%20Right%20Thing%201989%201080p.BluRay.5.1.x264%20.%20NVEE/Do%20the%20Right%20Thing.1989.1040p.BluRay.5.1.x264%20.%20NVEE.mp4",
+                        "properties": {
+                            "html5x:subtitle:nl:Dutch": "http://192.168.1.40\n:8080/Movies/Do%20the%20Right%20Thing%201989%201080p.BluRay.5.1.x264%20.%20NVEE/Do%20the%20Right%20Thing.1989.1040p.BluRay.5.1.x264%20.%20NVEE_Dutch.vtt",
+                            "html5x:subtitle:en:English": "http://192.168.1.40\n:8080/Movies/Do%20the%20Right%20Thing%201989%201080p.BluRay.5.1.x264%20.%20NVEE/Do%20the%20Right%20Thing.1989.1040p.BluRay.5.1.x264%20.%20NVEE_English_Without_Lyrics.vtt",
+                            "html5x:subtitle:hu:Hungarian": "http://192.168.1.40\n:8080/Movies/Do%20the%20Right%20Thing%201989%201080p.BluRay.5.1.x264%20.%20NVEE/Do%20the%20Right%20Thing.1989.1040p.BluRay.5.1.x264%20.%20NVEE_Hungarian.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Dumb and Dumber",
+                        "image": "https://image.tmdb.org/t/p/w500/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg",
+                        "tag": "{ico:star}6.6",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Dumb and Dumber",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Dumb%20and%20Dumber%20(1994)%20%5B1080p%5D/Dumb.And.Dumber.1994.1080p.BluRay.x264.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Dumb%20and%20Dumber%20(1994)%20%5B1080p%5D/Dumb.And.Dumber.1994.1080p.BluRay.x264.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Falling Down",
+                        "image": "https://image.tmdb.org/t/p/w500/7ujqyF96Zg3rfrsh9M0cEF0Yzqj.jpg",
+                        "tag": "{ico:star}7.3",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Falling Down",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Falling%20Down%20(1993)%20%5B1080p%5D/Falling.Down.1993.1080p.BluRay.x264.YIFY.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Groundhog Day",
+                        "image": "https://image.tmdb.org/t/p/w500/gCgt1WARPZaXnq523ySQEUKinCs.jpg",
+                        "tag": "{ico:star}7.6",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Groundhog Day",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Groundhog%20Day%20(1993)/Groundhog.Day.1993.BrRip.720p.x264.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Groundhog%20Day%20(1993)/Groundhog.Day.1993.BrRip.720p.x264.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Once Upon a Time\u2026 in Hollywood",
+                        "image": "https://image.tmdb.org/t/p/w500/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
+                        "tag": "{ico:star}7.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Once Upon a Time\u2026 in Hollywood",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Once%20Upon%20A%20Time%20...%20In%20Hollywood%20(2019)%20%5BBluRay%5D%20%5B1080p%5D%20%5BYTS.LT%5D/Once.Upon.A.Time.....In.Hollywood.2019.1080p.BluRay.x264-%5BYTS.LT%5D.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Quick Change",
+                        "image": "https://image.tmdb.org/t/p/w500/8q0VQYwOhhuRFMsyzdZ5JoB676g.jpg",
+                        "tag": "{ico:star}6.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Quick Change",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Quick%20Change%20(1990)%20%5B1080p%5D%20%5BWEBRip%5D%20%5BYTS.MX%5D/Quick.Change.1990.1080p.WEBRip.x264.AAC-%5BYTS.MX%5D.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Quick%20Change%20(1990)%20%5B1080p%5D%20%5BWEBRip%5D%20%5BYTS.MX%5D/Quick.Change.1990.1080p.WEBRip.x264.AAC-%5BYTS.MX%5D.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Rogue One: A Star Wars Story",
+                        "image": "https://image.tmdb.org/t/p/w500/5jX3p0apUG5bkMHtnKZch0xpkBS.jpg",
+                        "tag": "{ico:star}7.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Rogue One: A Star Wars Story",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Rogue.One.A.Star.Wars.Story.2016.1080p.BluRay.6CH.ShAaNiG.mkv"
+                    },
+                    {
+                        "title": "Slacker",
+                        "image": "https://image.tmdb.org/t/p/w500/uNtzrTiQQMHwabGr0aAi8TvuII9.jpg",
+                        "tag": "{ico:star}6.8",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Slacker",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Slacker.mkv"
+                    },
+                    {
+                        "title": "Solo: A Star Wars Story",
+                        "image": "https://image.tmdb.org/t/p/w500/4oD6VEccFkorEBTEDXtpLAaz0Rl.jpg",
+                        "tag": "{ico:star}6.6",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Solo: A Star Wars Story",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Solo%20A%20Star%20Wars%20Story%20(2018)%20%5BBluRay%5D%20%5B1080p%5D%20%5BYTS.AM%5D/Solo.A.Star.Wars.Story.2018.1080p.BluRay.x264-%5BYTS.AM%5D.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Stand by Me",
+                        "image": "https://image.tmdb.org/t/p/w500/vz0w9BSehcqjDcJOjRaCk7fgJe7.jpg",
+                        "tag": "{ico:star}7.9",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Stand by Me",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Stand%20by%20Me%20(1986)%20%5B1080p%5D/Stand.by.Me.1986.1080p.BluRay.x264.YIFY.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Star Wars: Episode I - The Phantom Menace",
+                        "image": "https://image.tmdb.org/t/p/w500/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
+                        "tag": "{ico:star}6.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Star Wars: Episode I - The Phantom Menace",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20I%20The%20Phantom%20Menace%20(1999)%20%5B1080p%5D/Star.Wars.Episode.1.The.Phantom.Menace.1999.1080p.BrRip.x264.BOKUTOX.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20I%20The%20Phantom%20Menace%20(1999)%20%5B1080p%5D/Star.Wars.Episode.1.The.Phantom.Menace.1999.1080p.BrRip.x264.BOKUTOX.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Star Wars",
+                        "image": "https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+                        "tag": "{ico:star}8.2",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Star Wars",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20IV%20A%20New%20Hope%20(1977)%20%5B1080p%5D/Star.Wars.Episode.4.A.New.Hope.1977.1080p.BrRip.x264.BOKUTOX.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20IV%20A%20New%20Hope%20(1977)%20%5B1080p%5D/Star.Wars.Episode.4.A.New.Hope.1977.1080p.BrRip.x264.BOKUTOX.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "The Empire Strikes Back",
+                        "image": "https://image.tmdb.org/t/p/w500/7BuH8itoSrLExs2YZSsM01Qk2no.jpg",
+                        "tag": "{ico:star}8.4",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Empire Strikes Back",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20V%20The%20Empire%20Strikes%20Back%20(1980)%20%5B1080p%5D/Star.Wars.Episode.5.The.Empire.Strikes.Back.1980.1080p.BrRip.x264.BOKUTOX.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20V%20The%20Empire%20Strikes%20Back%20(1980)%20%5B1080p%5D/Star.Wars.Episode.5.The.Empire.Strikes.Back.1980.1080p.BrRip.x264.BOKUTOX.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Return of the Jedi",
+                        "image": "https://image.tmdb.org/t/p/w500/mDCBQNhR6R0PVFucJl0O4Hp5klZ.jpg",
+                        "tag": "{ico:star}8",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Return of the Jedi",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20VI%20Return%20of%20the%20Jedi%20(1983)%20%5B1080p%5D/Star.Wars.Episode.6.Return.of.the.Jedi.1983.1080p.BrRip.x264.BOKUTOX.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Star%20Wars%20Episode%20VI%20Return%20of%20the%20Jedi%20(1983)%20%5B1080p%5D/Star.Wars.Episode.6.Return.of.the.Jedi.1983.1080p.BrRip.x264.BOKUTOX.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "Star Wars: Episode III - Revenge of the Sith",
+                        "image": "https://image.tmdb.org/t/p/w500/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
+                        "tag": "{ico:star}7.3",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Star Wars: Episode III - Revenge of the Sith",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Star.Wars.Episode.III.Revenge.Of.The.Sith.2005.1080p.Bluray.x264.anoXmous/Star.Wars.Episode.III.Revenge.Of.The.Sith.2005.1080p.Bluray.x264.anoXmous.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Star Wars: The Force Awakens",
+                        "image": "https://image.tmdb.org/t/p/w500/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg",
+                        "tag": "{ico:star}7.4",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Star Wars: The Force Awakens",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Star.Wars.Episode.VII.The.Force.Awakens.2015.1080p.BluRay.x264.DTS-JYK/Star.Wars.Episode.VII.The.Force.Awakens.2015.1080p.BluRay.x264.DTS-JYK.mkv",
+                        "properties": {
+                            "html5x:subtitle:en:English": "http://192.168.1.40\n:8080/Movies/Star.Wars.Episode.VII.The.Force.Awakens.2015.1080p.BluRay.x264.DTS-JYK/Subs/English.vtt",
+                            "html5x:subtitle:fr:French": "http://192.168.1.40\n:8080/Movies/Star.Wars.Episode.VII.The.Force.Awakens.2015.1080p.BluRay.x264.DTS-JYK/Subs/French.vtt",
+                            "html5x:subtitle:pa:Panjabi, Punjabi": "http://192.168.1.40\n:8080/Movies/Star.Wars.Episode.VII.The.Force.Awakens.2015.1080p.BluRay.x264.DTS-JYK/Subs/Spanish.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "The Adventures of Ford Fairlane",
+                        "image": "https://image.tmdb.org/t/p/w500/u6accimG7LmroR8WgNklEJS7oFq.jpg",
+                        "tag": "{ico:star}6.1",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Adventures of Ford Fairlane",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The%20Adventures%20Of%20Ford%20Fairlane%20(1990)%20%5B1080p%5D/The.Adventures.Of.Ford.Fairlane.1990.1080p.BluRay.x264.%5BYTS.AG%5D.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "The Big Lebowski",
+                        "image": "https://image.tmdb.org/t/p/w500/d4J7GotCjvDJBAYayZBTc5nLbbP.jpg",
+                        "tag": "{ico:star}7.9",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Big Lebowski",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The%20Big%20Lebowski%201998.1080p.BluRay.x264.anoXmous/The%20Big%20Lebowski%201998.1080p.BluRay.x264.anoXmous_.mp4",
+                        "properties": {
+                            "html5x:subtitle:en:English": "http://192.168.1.40\n:8080/Movies/The%20Big%20Lebowski%201998.1080p.BluRay.x264.anoXmous/The%20Big%20Lebowski%201998.1080p.BluRay.x264.anoXmous_eng.vtt",
+                            "html5x:subtitle:sv:Swedish": "http://192.168.1.40\n:8080/Movies/The%20Big%20Lebowski%201998.1080p.BluRay.x264.anoXmous/The%20Big%20Lebowski%201998.1080p.BluRay.x264.anoXmous_swe.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "The Goonies",
+                        "image": "https://image.tmdb.org/t/p/w500/oxz1HIdUjQN23IZQk4Gy7ozJBM0.jpg",
+                        "tag": "{ico:star}7.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Goonies",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The%20Goonies%20(1985)%20%5B1080p%5D/The.Goonies.1985.1080p.BrRip.x264.YIFY.mp4",
+                        "properties": {
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/The%20Goonies%20(1985)%20%5B1080p%5D/The.Goonies.1985.1080p.BrRip.x264.YIFY.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "The Pink Panther",
+                        "image": "https://image.tmdb.org/t/p/w500/azIoCxiH9wIPCCGnqaDW8DJwCLl.jpg",
+                        "tag": "{ico:star}6.9",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Pink Panther",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The%20Pink%20Panther%20(1963)/The.Pink.Panther.1963.720p.BrRip.x264.YIFY.mkv",
+                        "properties": {}
+                    },
+                    {
+                        "title": "The Pink Panther Strikes Again",
+                        "image": "https://image.tmdb.org/t/p/w500/4W2r5CFXjD05AgYX8QxZQ18jdSk.jpg",
+                        "tag": "{ico:star}6.9",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Pink Panther Strikes Again",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The%20Pink%20Panther%20Strikes%20Again%20(1976)%20%5BWEBRip%5D%20%5B1080p%5D%20%5BYTS.LT%5D/The.Pink.Panther.Strikes.Again.1976.1080p.WEBRip.x264-%5BYTS.LT%5D.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "The Color of Money",
+                        "image": "https://image.tmdb.org/t/p/w500/dVdnHmdQu3JtLAAksjTmTEF76gD.jpg",
+                        "tag": "{ico:star}6.8",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Color of Money",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The.Color.of.Money.1986.25th.Anniversary.1080p.BluRay.x264.anoXmous/The.Color.of.Money.1986.25th.Anniversary.1080p.BluRay.x264.anoXmous_.mp4",
+                        "properties": {
+                            "html5x:subtitle:en:English": "http://192.168.1.40\n:8080/Movies/The.Color.of.Money.1986.25th.Anniversary.1080p.BluRay.x264.anoXmous/The.Color.of.Money.1986.25th.Anniversary.1080p.BluRay.x264.anoXmous_eng.vtt",
+                            "html5x:subtitle:sv:Swedish": "http://192.168.1.40\n:8080/Movies/The.Color.of.Money.1986.25th.Anniversary.1080p.BluRay.x264.anoXmous/The.Color.of.Money.1986.25th.Anniversary.1080p.BluRay.x264.anoXmous_swe.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "The Hustler",
+                        "image": "https://image.tmdb.org/t/p/w500/n2zbi9ePKNkCgguCTeurdwP40Ax.jpg",
+                        "tag": "{ico:star}7.8",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Hustler",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_.mp4",
+                        "properties": {
+                            "html5x:subtitle:da:Danish": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_dan.vtt",
+                            "html5x:subtitle:nl:Dutch": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_dut.vtt",
+                            "html5x:subtitle:en:English": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_eng%5BSDH%5D.vtt",
+                            "html5x:subtitle:fi:Finnish": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_fin.vtt",
+                            "html5x:subtitle:fr:French": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_fre.vtt",
+                            "html5x:subtitle:de:German": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_ger.vtt",
+                            "html5x:subtitle:no:Norwegian": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_nor.vtt",
+                            "html5x:subtitle:pt:Portuguese": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_por.vtt",
+                            "html5x:subtitle:es:Spanish": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_spa.vtt",
+                            "html5x:subtitle:sv:Swedish": "http://192.168.1.40\n:8080/Movies/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous/The.Hustler.1961.50th.Anniversary.1080p.BluRay.x264.anoXmous_swe.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    },
+                    {
+                        "title": "The Return of the Pink Panther",
+                        "image": "https://image.tmdb.org/t/p/w500/g4gMjoLE9ywvTQ7AvDnwc9Vs8dv.jpg",
+                        "tag": "{ico:star}6.8",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "The Return of the Pink Panther",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/The.Return.of.the.Pink.Panther.1975.BRRip.XviD.MP3-RARBG/The.Return.of.the.Pink.Panther.1975.BRRip.XviD.MP3-RARBG.avi",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Thelma & Louise",
+                        "image": "https://image.tmdb.org/t/p/w500/cQaqpwN5Nq0GNNKE1hIgYLpLlca.jpg",
+                        "tag": "{ico:star}7.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Thelma & Louise",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Thelma%20And%20Louise%20(1991)%20%5B1080p%5D/Thelma.and.Louise.1991.1080p.BluRay.x264.%5BYTS.AG%5D.mp4",
+                        "properties": {}
+                    },
+                    {
+                        "title": "Where's My Roy Cohn?",
+                        "image": "https://image.tmdb.org/t/p/w500/kLLsinqf2a6dC7HcYPY3oiL9s1N.jpg",
+                        "tag": "{ico:star}5.5",
+                        "tagColor": "msx-yellow",
+                        "playerLabel": "Where's My Roy Cohn?",
+                        "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/Movies/Where's%20My%20Roy%20Cohn%20%20(2019)%20%5B1080p%5D%20%5BBluRay%5D%20%5B5.1%5D%20%5BYTS.MX%5D/Where's.My.Roy.Cohn..2019.1080p.BluRay.x264.AAC5.1-%5BYTS.MX%5D.mp4",
+                        "properties": {
+                            "html5x:subtitle:en:English": "http://192.168.1.40\n:8080/Movies/Where's%20My%20Roy%20Cohn%20%20(2019)%20%5B1080p%5D%20%5BBluRay%5D%20%5B5.1%5D%20%5BYTS.MX%5D/Subs/Forced.eng.vtt",
+                            "html5x:subtitle:??:Unknown": "http://192.168.1.40\n:8080/Movies/Where's%20My%20Roy%20Cohn%20%20(2019)%20%5B1080p%5D%20%5BBluRay%5D%20%5B5.1%5D%20%5BYTS.MX%5D/Where's.My.Roy.Cohn..2019.1080p.BluRay.x264.AAC5.1-%5BYTS.MX%5D.vtt",
+                            "button:content:icon": "subtitles",
+                            "button:content:action": "panel:request:player:subtitle"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "icon": "tv",
+            "label": "tv-shows",
+            "data": {
+                "type": "list",
+                "template": {
+                    "type": "separate",
+                    "layout": "0,0,2,4"
+                },
+                "pages": [
+                    {
+                        "headline": "Sledge Hammer!",
+                        "items": [
+                            {
+                                "type": "separate",
+                                "layout": "0,0,2,4",
+                                "label": "Sledge Hammer!",
+                                "image": "https://image.tmdb.org/t/p/w500/exYBfVOkRDg9f7HlRIDZ6gy3A73.jpg",
+                                "action": "panel:data",
+                                "data": {
+                                    "pages": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "separate",
+                                                    "layout": "0,0,2,4",
+                                                    "label": "Season 1",
+                                                    "image": "https://image.tmdb.org/t/p/w500/uWZPhLOu27X6ITXaivBjPiTkhd3.jpg",
+                                                    "action": "panel:data",
+                                                    "data": {
+                                                        "headline": "Template",
+                                                        "template": {
+                                                            "type": "separate",
+                                                            "layout": "0,0,2,4",
+                                                            "color": "msx-glass",
+                                                            "iconSize": "medium",
+                                                            "title": "Title"
+                                                        },
+                                                        "items": [
+                                                            {
+                                                                "title": "Under The Gun",
+                                                                "image": "https://image.tmdb.org/t/p/w500/tkrrUsAnZa6WfH9UfvUb4sDRNXh.jpg",
+                                                                "tag": "E1",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E1 Under The Gun",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E01.UnderTheGun%5BPilot%5D.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Hammer Gets Nailed",
+                                                                "image": "https://image.tmdb.org/t/p/w500/3ai6hQ2yA5yfmlml5ihVdYvxups.jpg",
+                                                                "tag": "E2",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E2 Hammer Gets Nailed",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E02.HammerGetsNailed.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Witless",
+                                                                "image": "https://image.tmdb.org/t/p/w500/5jlgXEAJqDYXsWDSYupOBRyV3o1.jpg",
+                                                                "tag": "E3",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E3 Witless",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E03.Witless.mkv"
+                                                            },
+                                                            {
+                                                                "title": "They Shoot Hammers, Don't They?",
+                                                                "image": "https://image.tmdb.org/t/p/w500/ttmn12vfugn3bui5yxVxPnUsWus.jpg",
+                                                                "tag": "E4",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E4 They Shoot Hammers, Don't They?",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E04.TheyShootHammers.DontThey.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Dori Day Afternoon",
+                                                                "image": "https://image.tmdb.org/t/p/w500/hAt8EzpmpBFYlqcnXO81S0vodWC.jpg",
+                                                                "tag": "E5",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E5 Dori Day Afternoon",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E05.DoriDayAfternoon.mkv"
+                                                            },
+                                                            {
+                                                                "title": "To Sledge, with Love",
+                                                                "image": "https://image.tmdb.org/t/p/w500/oGkJS6O0OsMlNXuuFmGfN8ZPZod.jpg",
+                                                                "tag": "E6",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E6 To Sledge, with Love",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E06.ToSledge.WithLove.mkv"
+                                                            },
+                                                            {
+                                                                "title": "All Shook Up",
+                                                                "image": "https://image.tmdb.org/t/p/w500/lauuV0Oqq4oq4gYvI39zwEcaQdl.jpg",
+                                                                "tag": "E7",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E7 All Shook Up",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E07.AllShookUp.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Over My Dead Bodyguard",
+                                                                "image": "https://image.tmdb.org/t/p/w500/647S02Q1S3s0P2jedpXNvL18jtu.jpg",
+                                                                "tag": "E8",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E8 Over My Dead Bodyguard",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E08.OverMyDeadBodyguard.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Magnum Farce",
+                                                                "image": "https://image.tmdb.org/t/p/w500/kmqypgvahNvZD2bHVN9mMLUdxHZ.jpg",
+                                                                "tag": "E9",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E9 Magnum Farce",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E09.MagnumFarce.mkv"
+                                                            },
+                                                            {
+                                                                "title": "If I Had a Little Hammer",
+                                                                "image": "https://image.tmdb.org/t/p/w500/rp4lIGCXPVxqZhX2ka6PkatelcI.jpg",
+                                                                "tag": "E10",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E10 If I Had a Little Hammer",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E10.IfIHadALittleHammer.mkv"
+                                                            },
+                                                            {
+                                                                "title": "To Live and Die on TV",
+                                                                "image": "https://image.tmdb.org/t/p/w500/jTBNU5iPSpxrW3hnC0tnRh8t5Tu.jpg",
+                                                                "tag": "E11",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E11 To Live and Die on TV",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E11.ToLive.n.DieOnTV.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Miss of the Spider Woman",
+                                                                "image": "https://image.tmdb.org/t/p/w500/z4uxcLQhW0f2y4gfbcR22ASTige.jpg",
+                                                                "tag": "E12",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E12 Miss of the Spider Woman",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E12.MissOfTheSpiderWoman.mkv"
+                                                            },
+                                                            {
+                                                                "title": "The Old Man and the Sledge",
+                                                                "image": "https://image.tmdb.org/t/p/w500/pmQFnG1jj2WgldOfBC9MO0cYbqh.jpg",
+                                                                "tag": "E13",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E13 The Old Man and the Sledge",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E13.TheOldManAndTheSledge.mkv"
+                                                            },
+                                                            {
+                                                                "title": "State of Sledge",
+                                                                "image": "https://image.tmdb.org/t/p/w500/oHwd6c9zGqMOBZwTI9dLSAv9DLa.jpg",
+                                                                "tag": "E14",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E14 State of Sledge",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E14.StateOfSledge.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Haven't Gun, Will Travel",
+                                                                "image": "https://image.tmdb.org/t/p/w500/5ysuD1c8RxlcO1OPhxUkbeCTI2B.jpg",
+                                                                "tag": "E15",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E15 Haven't Gun, Will Travel",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E15.HaventGun.WillTravel.mkv"
+                                                            },
+                                                            {
+                                                                "title": "The Color of Hammer",
+                                                                "image": "https://image.tmdb.org/t/p/w500/xPs8Y2khkc4qbsxVB8F9FTWOtFq.jpg",
+                                                                "tag": "E16",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E16 The Color of Hammer",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E16.TheColourOfHammer.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Brother, Can You Spare a Crime?",
+                                                                "image": "https://image.tmdb.org/t/p/w500/rGfzTR0hnjKTtYxKBXePIS87bqM.jpg",
+                                                                "tag": "E17",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E17 Brother, Can You Spare a Crime?",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E17.Brother.CanYouSpareACrime.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Desperately Seeking Dori",
+                                                                "image": "https://image.tmdb.org/t/p/w500/gVwZ4mxxcTXbX3t7wRYhtUdZLiK.jpg",
+                                                                "tag": "E18",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E18 Desperately Seeking Dori",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E18.DesperatelySeekingDori.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Sledgepoo",
+                                                                "image": "https://image.tmdb.org/t/p/w500/qgJz15f3QpZagff0YH9XBKZysJW.jpg",
+                                                                "tag": "E19",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E19 Sledgepoo",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E19.Sledgepoo.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Comrade Hammer",
+                                                                "image": "https://image.tmdb.org/t/p/w500/aJUES0bmj5oKtbjATIalIin20Or.jpg",
+                                                                "tag": "E20",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E20 Comrade Hammer",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E20.ComradeHammer.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Jagged Sledge",
+                                                                "image": "https://image.tmdb.org/t/p/w500/q5sHdBRqcaScRkhxRsqWRzSTeka.jpg",
+                                                                "tag": "E21",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E21 Jagged Sledge",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E21.JaggedSledge.mkv"
+                                                            },
+                                                            {
+                                                                "title": "The Spa Who Loved Me",
+                                                                "image": "https://image.tmdb.org/t/p/w500/iciRWnjq9UxgwfTfDMnE4nFY2Ro.jpg",
+                                                                "tag": "E22",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E22 The Spa Who Loved Me",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.E22.TheSpaWhoLovedMe.mkv"
+                                                            },
+                                                            {
+                                                                "title": "EBonus.MakingOf",
+                                                                "tag": "E0",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 1}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S1E0 EBonus.MakingOf",
+                                                                "tmpSeason": 1,
+                                                                "tmpEpisode": "",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%201/SledgeHammer.S01.EBonus.MakingOf.mkv",
+                                                                "properties": {},
+                                                                "image": "https://image.tmdb.org/t/p/w500/uWZPhLOu27X6ITXaivBjPiTkhd3.jpg"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "separate",
+                                                    "layout": "3,0,2,4",
+                                                    "label": "Season 2",
+                                                    "image": "https://image.tmdb.org/t/p/w500/gfC8PYfXiuKuodSSDiaw3FKuVnn.jpg",
+                                                    "action": "panel:data",
+                                                    "data": {
+                                                        "headline": "Template",
+                                                        "template": {
+                                                            "type": "separate",
+                                                            "layout": "0,0,2,4",
+                                                            "color": "msx-glass",
+                                                            "iconSize": "medium",
+                                                            "title": "Title"
+                                                        },
+                                                        "items": [
+                                                            {
+                                                                "title": "A Clockwork Hammer",
+                                                                "image": "https://image.tmdb.org/t/p/w500/fOkwbyfFSWBnc0swePMgVnCywwA.jpg",
+                                                                "tag": "E1",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E1 A Clockwork Hammer",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E01.AClockworkHammer.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Big Nazi on Campus",
+                                                                "image": "https://image.tmdb.org/t/p/w500/x3xYQlIZzNvqBu1LoWuogB2040k.jpg",
+                                                                "tag": "E2",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E2 Big Nazi on Campus",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E02.BigNaziOnCampus.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Play It Again, Sledge",
+                                                                "image": "https://image.tmdb.org/t/p/w500/u7adjhaXDO1LklmmLNO1IkiUMQn.jpg",
+                                                                "tag": "E3",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E3 Play It Again, Sledge",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E03.PlayItAgain.Sledge.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Wild About Hammer",
+                                                                "image": "https://image.tmdb.org/t/p/w500/zdvFP7rUFtsYxk3SNMeEEEFUQBN.jpg",
+                                                                "tag": "E4",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E4 Wild About Hammer",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E04.WildAboutHammer.mkv"
+                                                            },
+                                                            {
+                                                                "title": "The Death of a Few Salesmen",
+                                                                "image": "https://image.tmdb.org/t/p/w500/kWKd72bXuv0HQeQfnxtCsQa4DQ4.jpg",
+                                                                "tag": "E5",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E5 The Death of a Few Salesmen",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E05.DeathOfAFewSalesmen.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Vertical",
+                                                                "image": "https://image.tmdb.org/t/p/w500/8uai46MQLfOE5MiWrTxDilW3UQb.jpg",
+                                                                "tag": "E6",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E6 Vertical",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E06.Vertical.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Dressed to Call",
+                                                                "image": "https://image.tmdb.org/t/p/w500/3dX08GZIp2FFHXliDq2hIwb5yPk.jpg",
+                                                                "tag": "E7",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E7 Dressed to Call",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E07.DressedToCall.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Hammer Hits the Rock (a.k.a. Sledge on the Rock)",
+                                                                "image": "https://image.tmdb.org/t/p/w500/lQTCt9bzYyXK818R58XOqmJS3NX.jpg",
+                                                                "tag": "E8",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E8 Hammer Hits the Rock (a.k.a. Sledge on the Rock)",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E08.HammerHitsTheRock.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Hammeroid",
+                                                                "image": "https://image.tmdb.org/t/p/w500/2Pm1D4u6whEuXOo4LwMTbkfGcSB.jpg",
+                                                                "tag": "E9",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E9 Hammeroid",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E09.Hammeroid.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Last of the Red Hot Vampires",
+                                                                "image": "https://image.tmdb.org/t/p/w500/i2iRnbehQiwmdvZijP2CxTRGmt8.jpg",
+                                                                "tag": "E10",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E10 Last of the Red Hot Vampires",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E10.TheLastOfTheRedHotVampires.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Sledge in Toyland",
+                                                                "image": "https://image.tmdb.org/t/p/w500/4RPaJQUgNy1W8ERSKpGRwToJllV.jpg",
+                                                                "tag": "E11",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E11 Sledge in Toyland",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E11.SledgeInToyland.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Icebreaker",
+                                                                "image": "https://image.tmdb.org/t/p/w500/xBUEs8JeYhJI1R3Mgn8LckDmfuQ.jpg",
+                                                                "tag": "E12",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E12 Icebreaker",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E12.Icebreaker.mkv"
+                                                            },
+                                                            {
+                                                                "title": "They Call Me Mr. Trunk",
+                                                                "image": "https://image.tmdb.org/t/p/w500/omTEKhYnMw0owhT7dgduhy3j45k.jpg",
+                                                                "tag": "E13",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E13 They Call Me Mr. Trunk",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E13.TheyCallMeMrTrunk.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Model Dearest",
+                                                                "image": "https://image.tmdb.org/t/p/w500/1GwtHCqigQ1xSDjTMLcLe28DYHm.jpg",
+                                                                "tag": "E14",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E14 Model Dearest",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E14.ModelDearest.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Sledge, Rattle & Roll",
+                                                                "image": "https://image.tmdb.org/t/p/w500/tc3skAs6SRmHokTAooOfoRbPZAJ.jpg",
+                                                                "tag": "E15",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E15 Sledge, Rattle & Roll",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E15.Sledge.Rattle.n.Roll.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Suppose They Gave a War and Sledge Came?",
+                                                                "image": "https://image.tmdb.org/t/p/w500/8MqTrYQGVmxEmWgN3gTppZnI15B.jpg",
+                                                                "tag": "E16",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E16 Suppose They Gave a War and Sledge Came?",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E16.SupposeTheyGaveAWar.n.SledgeCame.mkv"
+                                                            },
+                                                            {
+                                                                "title": "The Secret of My Excess",
+                                                                "image": "https://image.tmdb.org/t/p/w500/kA0AXjPagXNhA6sfrkEEePmAxJW.jpg",
+                                                                "tag": "E17",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E17 The Secret of My Excess",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E17.TheSecretOfMyExcess.mkv"
+                                                            },
+                                                            {
+                                                                "title": "It Happened What Night?",
+                                                                "image": "https://image.tmdb.org/t/p/w500/47biqI1xwvNLOoZPfxYXKeMbqzv.jpg",
+                                                                "tag": "E18",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E18 It Happened What Night?",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E18.ItHappenedWhatNight.mkv"
+                                                            },
+                                                            {
+                                                                "title": "Here's to You, Mrs. Hammer",
+                                                                "image": "https://image.tmdb.org/t/p/w500/doytuT1Mumn3ntWz3VqHcBZ5xPF.jpg",
+                                                                "tag": "E19",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E19 Here's to You, Mrs. Hammer",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.E19.HeresToYou.MrsHammer.mkv"
+                                                            },
+                                                            {
+                                                                "title": "EBonus.GunCrazy",
+                                                                "tag": "E0",
+                                                                "tagColor": "msx-yellow",
+                                                                "badge": "{txt:msx-white:Season 2}",
+                                                                "badgeColor": "#643fa6",
+                                                                "playerLabel": "S2E0 EBonus.GunCrazy",
+                                                                "tmpSeason": 2,
+                                                                "tmpEpisode": "",
+                                                                "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=http://192.168.1.40\n:8080/tv-shows/Sledge%20Hammer/Sledge%20Hammer%20season%202/SledgeHammer.S02.EBonus.GunCrazy.mkv",
+                                                                "properties": {},
+                                                                "image": "https://image.tmdb.org/t/p/w500/gfC8PYfXiuKuodSSDiaw3FKuVnn.jpg"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
