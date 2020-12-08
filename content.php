@@ -99,7 +99,92 @@ function create_media_items($dir, &$media_items) {
     return $media_items;
 }
 
-function construct_subtitle_entry($subtitle_file, $dir, &$object) {
+/**
+ * Collect raw subtitles map by folder as key.
+ * loop over raw subtitles and if '.srt' file with no corresponding '.vtt' file
+ * we convert the '.srt' file to '.vtt' format understandable by our player.
+ * Gather all subtitles distinct by language.
+ * 
+ * @param $dir
+ * 
+ * @return $object
+ */
+function subtitles_properties($dir) {
+    $object = new stdClass();
+    $subtitles_raw = rec_subtitles($dir);
+
+    foreach ($subtitles_raw as $key => $subtitles) {
+        if (is_array($subtitles) || is_object($subtitles)) {
+            foreach ($subtitles as $subtitle) {
+                $same_file = false;
+                if (stripos($subtitle, 'srt', -3) !== false) {
+                    // if '.srt' found, look if corresponding '.vtt' file exists,
+                    // if so, we do not convert the '.srt' file to '.vtt'.
+                    foreach ($subtitles as $subtitle_again) {
+                        if (stripos($subtitle_again, 'vtt', -3) !== false) {
+                            if (substr($subtitle, 0, -4) === substr($subtitle_again, 0, -4)) {
+                                subtitle_entry($subtitle_again, $key, $object);
+                                $same_file = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (!$same_file) {
+                        subtitle_entry($subtitle, $key, $object);
+                    }
+                }
+            }
+            $object->{"button:content:icon"} = "subtitles";
+            $object->{"button:content:action"} = "panel:request:player:subtitle";
+        }
+    }
+
+    return $object;
+}
+
+/**
+ * Recursive func. that iterates through all folders and subfolders and gathers
+ * all subtitle files for corresponding media file.
+ * And return them as a map, where the folder is the key.
+ * 
+ * @param $dir, $subtitles_raw
+ * 
+ * @return $subtitle_map
+ */
+function rec_subtitles($dir, &$subtitles_raw = null) {
+    $files_and_folders = get_directories($dir);
+
+    // prevent empty ordered elements
+    if (count($files_and_folders) < 1) return;
+
+    $subtitle_map = array();
+    foreach($files_and_folders as $ff) {
+        if (is_dir($dir.'/'.$ff)) {
+            rec_subtitles($dir.'/'.$ff, $subtitles_raw);
+        }
+
+        foreach ($GLOBALS['subfiles_ext'] as $sub_ext) {
+            if (stripos($ff, $sub_ext, -3) !== false) {
+                $subtitles_raw[] = $dir.'/'.$ff;
+            } 
+        }
+
+        $subtitle_map[$dir] = $subtitles_raw;
+    }
+
+    return $subtitle_map;
+}
+
+/**
+ * Convert a '.srt' file via third party library over to format that our player understands '.vtt'
+ * Then create the subtitle object per language.
+ * 
+ * @param $subfile_file, $dir, $object
+ * 
+ * @return $object
+ */
+function subtitle_entry($subtitle_file, $dir, &$object) {
     $iso639 = new Matriphe\ISO639\ISO639;
 
     $search_str = strtolower(substr($subtitle_file, strripos($subtitle_file, '.', -5)));
@@ -124,64 +209,6 @@ function construct_subtitle_entry($subtitle_file, $dir, &$object) {
 
     // odd sub file name, mark it as 'Unknown'
     $object->{sprintf("html5x:subtitle:??:Unknown", $languages[0], $languages[4])} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
-}
-
-function subtitles_properties($dir) {
-    $object = new stdClass();
-    $subtitles_raw = rec_subtitles($dir);
-
-    foreach ($subtitles_raw as $key => $subtitles) {
-        if (is_array($subtitles) || is_object($subtitles)) {
-            foreach ($subtitles as $subtitle) {
-                $same_file = false;
-                if (stripos($subtitle, 'srt', -3) !== false) {
-                    // if '.srt' found, loop over all subs in that folder and see if
-                    // corresponding '.vtt' file exists, if so, we do not convert the '.srt' file to '.vtt'.
-                    foreach ($subtitles as $subtitle_again) {
-                        if (stripos($subtitle_again, 'vtt', -3) !== false) {
-                            if (substr($subtitle, 0, -4) === substr($subtitle_again, 0, -4)) {
-                                construct_subtitle_entry($subtitle_again, $key, $object);
-                                $same_file = true;
-                                break;
-                            }
-                        }
-                    }
-
-                    if (!$same_file) {
-                        construct_subtitle_entry($subtitle, $key, $object);
-                    }
-                }
-            }
-            $object->{"button:content:icon"} = "subtitles";
-            $object->{"button:content:action"} = "panel:request:player:subtitle";
-        }
-    }
-
-    return $object;
-}
-
-function rec_subtitles($dir, &$subtitles_raw = null) {
-    $files_and_folders = get_directories($dir);
-
-    // prevent empty ordered elements
-    if (count($files_and_folders) < 1) return;
-
-    $tmp_array = array();
-    foreach($files_and_folders as $ff) {
-        if (is_dir($dir.'/'.$ff)) {
-            rec_subtitles($dir.'/'.$ff, $subtitles_raw);
-        }
-
-        foreach ($GLOBALS['subfiles_ext'] as $sub_ext) {
-            if (stripos($ff, $sub_ext, -3) !== false) {
-                $subtitles_raw[] = $dir.'/'.$ff;
-            } 
-        }
-
-        $tmp_array[$dir] = $subtitles_raw;
-    }
-
-    return $tmp_array;
 }
 
 function create_tv_pages($dir) {
