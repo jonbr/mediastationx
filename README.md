@@ -13,10 +13,10 @@ to start up http-server and application run
 
 Roadmap
 ========
-Add better support for fast-forwarding when playing video files.
-Resume option; to continue from where you left of last time you whatched a particular video file.
-Re-scan of media folders, either by a dedicated action or restarting the application.
+* Add better support for fast-forwarding when playing video files.
+* Resume option; to continue from where you left of last time you whatched a particular video file.
+* Re-scan of media folders, either by a dedicated action or restarting the application.
 
-Need beter parser for .srt file names.
+** Need beter parser for .srt file names.
 
-Fix MacOs app, full screen not working properly.
+** Fix MacOs app, full screen not working properly.
