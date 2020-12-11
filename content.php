@@ -100,7 +100,7 @@ function create_media_items($dir, &$media_items) {
 }
 
 /**
- * Collect raw subtitles map by folder as key.
+ * Collect raw subtitles map where folder as key.
  * loop over raw subtitles and if '.srt' file with no corresponding '.vtt' file
  * we convert the '.srt' file to '.vtt' format understandable by our player.
  * Gather all subtitles distinct by language.
@@ -123,7 +123,7 @@ function subtitles_properties($dir) {
                     foreach ($subtitles as $subtitle_again) {
                         if (stripos($subtitle_again, 'vtt', -3) !== false) {
                             if (substr($subtitle, 0, -4) === substr($subtitle_again, 0, -4)) {
-                                subtitle_entry($subtitle_again, $key, $object);
+                                subtitle_entry($subtitle_again, $object);
                                 $same_file = true;
                                 break;
                             }
@@ -131,7 +131,7 @@ function subtitles_properties($dir) {
                     }
 
                     if (!$same_file) {
-                        subtitle_entry($subtitle, $key, $object);
+                        subtitle_entry($subtitle, $object);
                     }
                 }
             }
@@ -176,53 +176,19 @@ function rec_subtitles($dir, &$subtitles_raw = null) {
     return $subtitle_map;
 }
 
-/**
- * Convert a '.srt' file via third party library over to format that our player understands '.vtt'
- * Then create the subtitle object per language.
- * 
- * @param $subfile_file, $dir, $object
- * 
- * @return $object
- */
-function subtitle_entry($subtitle_file, $dir, &$object) {
-    $iso639 = new Matriphe\ISO639\ISO639;
-
-    $search_str = strtolower(substr($subtitle_file, strripos($subtitle_file, '.', -5)));
-    $file_ext = substr($subtitle_file, -3);
-
-    if ($file_ext === 'srt') {
-        try {
-            $srt = new SubripFile($subtitle_file, null, false, false);
-            $subtitle_file = substr($subtitle_file, 0, -3).'vtt';
-            $srt->convertTo('webvtt')->save($subtitle_file);
-        } catch(Exception $e) {
-            echo "Error: ".$e->getMessage()."\n";
-        }
-    }
-
-    foreach ($iso639->allLanguages() as $key => $languages) {
-        if (strpos($search_str, strtolower($languages[2])) !== false || strpos($search_str, strtolower($languages[4])) !== false) {
-            $object->{sprintf("html5x:subtitle:%s:%s", $languages[0], $languages[4])} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
-            return;
-        }
-    }
-
-    // odd sub file name, mark it as 'Unknown'
-    $object->{sprintf("html5x:subtitle:??:Unknown", $languages[0], $languages[4])} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
-}
-
 function create_tv_pages($dir) {
+    $ptn = new PTN();
+    
     $files_and_folders = get_directories($dir);
 
     $tv_pages = array();
     foreach ($files_and_folders as $files) {
-        $tv_show_obj = get_tv_show_obj($files);
+        $tv_show_obj = get_tv_show_obj($ptn->parse($files)['title']);
         $tv_pages[] = array(
             'headline' => $tv_show_obj['original_name'],
             'items' => array(array(
                 'type' => 'separate',
                 'layout' => '0,0,2,4',
-                'label' => $tv_show_obj['original_name'],
                 'image' => MOVIEDB_IMG_URL.$tv_show_obj['poster_path'],
                 'action' => 'panel:data',
                 'data' => array(
@@ -295,11 +261,10 @@ function tv_show_seasons($ff, $tv_show_obj) {
         $tv_seasons[] = array(
             "type" => "separate",
             "layout" => sprintf("%u,0,2,4", $layout),
-            "label" => sprintf("Season %u", $season_number),
             'image' => MOVIEDB_IMG_URL.$season_poster_path,
             "action" => "panel:data",
             "data" => array(
-                "headline" => "Template",
+                "headline" => $tv_show_obj['name'],
                 "template" => array(
                     "type" => "separate",
                     "layout" => "0,0,2,4",
@@ -307,7 +272,7 @@ function tv_show_seasons($ff, $tv_show_obj) {
                     "iconSize" => "medium",
                     "title" => "Title",
                 ),
-                "items" => tv_show_season_items($local_tv_episodes, $tv_show_obj['id'], $season_number, $season_poster_path),
+                "items" => tv_show_season_items($local_tv_episodes, $tv_show_obj['name'], $tv_show_obj['id'], $season_number, $season_poster_path),
             ),
         );
         $layout += 3;
@@ -325,7 +290,7 @@ function tv_show_seasons($ff, $tv_show_obj) {
  * 
  * @return $season_items
  */
-function tv_show_season_items($local_tv_episodes, $tv_show_id, $season_number, $season_poster_path) {
+function tv_show_season_items($local_tv_episodes, $tv_show_name, $tv_show_id, $season_number, $season_poster_path) {
     $season_items = array();
     $tv_show_season_obj = get_tv_show_season($tv_show_id, $season_number);
     foreach ($local_tv_episodes as $local_episode) {
@@ -340,7 +305,7 @@ function tv_show_season_items($local_tv_episodes, $tv_show_id, $season_number, $
                     'tagColor' => 'msx-yellow',
                     "badge" => sprintf("{txt:msx-white:Season %d}", $episode['season_number']),
                     "badgeColor" => "#643fa6",
-                    'playerLabel' => 'S'.$episode['season_number'].'E'.$episode['episode_number'].' '.$episode['name'],
+                    'playerLabel' => $tv_show_name.' | S'.$episode['season_number'].'E'.$episode['episode_number'].' | '.$episode['name'],
                     'action' => $local_episode['action'],
                 ];
                 break;
@@ -354,6 +319,55 @@ function tv_show_season_items($local_tv_episodes, $tv_show_id, $season_number, $
     }
 
     return $season_items;
+}
+
+/**
+ * Convert a '.srt' file via third party library over to format that our player understands '.vtt'
+ * Then create the subtitle object per language.
+ * 
+ * @param $subfile_file, $dir, $object
+ * 
+ * @return $object
+ */
+// TODO: clean up function! Looks at file ISO639.php out commented code
+function subtitle_entry($subtitle_file, &$object) {
+    $iso639 = new Matriphe\ISO639\ISO639;
+
+    //echo "subtitle_file: $subtitle_file\n";
+    $search_str = strtolower(substr($subtitle_file, strripos($subtitle_file, '.', -5)));
+    $file_ext = substr($subtitle_file, -4);
+
+    foreach ($iso639->allLanguages() as $key => $languages) {
+        $found = false;
+        $clean;
+        if (strpos($search_str, strtolower($languages[4])) !== false) {
+            $clean = substr($search_str, 0, strlen($search_str)-4);
+            $clean = trim(preg_replace("/^[^_]*|".$languages[4]."|_/", ' ', $clean));
+            if ($clean === "" || $clean === strtolower($languages[4])) {
+                $clean = $languages[4];
+            } else {
+                if ($clean[0] !== "[") $clean = "[".$clean."]";
+            }
+            $found = true;
+        } else if (strpos($search_str, strtolower($languages[2])) !== false) {
+            $clean = substr($search_str, 0, strlen($search_str)-4);
+            $clean = trim(preg_replace("/^[^_]*|".$languages[2]."|_/", ' ', $clean));
+            if ($clean === "" || $clean === strtolower($languages[4])) {
+                $clean = $languages[4];
+            } else {
+                if ($clean[0] !== "[") $clean = "[".$clean."]";
+            }
+            $found = true;
+        }
+
+        if ($found) {
+            $object->{sprintf("html5x:subtitle:%s:%s", $languages[0], $clean)} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
+            return;
+        }
+    }
+
+    // odd sub file name, assume it's english
+    $object->{"html5x:subtitle:en:English"} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
 }
 
 function get_directories($dir) {
