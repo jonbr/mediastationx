@@ -176,14 +176,25 @@ function rec_subtitles($dir, &$subtitles_raw = null) {
     return $subtitle_map;
 }
 
+/**
+ * First gather all same tv-shows episodes unrelated to folders, then create $tv_show_seasons obj.
+ * based on tv-show name.
+ */
 function create_tv_pages($dir) {
     $ptn = new PTN();
     
     $files_and_folders = get_directories($dir);
 
-    $tv_pages = array();
+    $tv_show_seasons = array();
     foreach ($files_and_folders as $files) {
-        $tv_show_obj = get_tv_show_obj($ptn->parse($files)['title']);
+        $parsed_tv_show_title = $ptn->parse($files)['title'];
+        $clean = trim(preg_replace("/season/i", '', $parsed_tv_show_title));
+        $tv_show_seasons[$clean][] = array($dir.'/'.$files);
+    }
+
+    $tv_pages = array();
+    foreach ($tv_show_seasons as $tv_show_name => $all_episodes) {
+        $tv_show_obj = get_tv_show_obj($tv_show_name);
         $tv_pages[] = array(
             'headline' => $tv_show_obj['original_name'],
             'items' => array(array(
@@ -193,7 +204,7 @@ function create_tv_pages($dir) {
                 'action' => 'panel:data',
                 'data' => array(
                     'pages' => array(array(
-                        'items' => tv_show_seasons($dir.'/'.$files, $tv_show_obj),
+                        'items' => tv_show_seasons($all_episodes, $tv_show_obj),
                     ))
                 )
             ))
@@ -236,16 +247,18 @@ function media_items($media_catagory, $parsed_torrent) {
 }
 
 /**
- * First the whole tv-show media items get created, then we group
+ * First the whole tv-show media items gets created, then we group
  * tv-shows by there seasons. Then we call tv_show_season_items()
  * 
  * @param $ff, $tv_show_obj
  * 
  * @return $tv_seasons
  */
-function tv_show_seasons($ff, $tv_show_obj) {    
+function tv_show_seasons($ffs, $tv_show_obj) {    
     $items = array();
-    create_media_items($ff, $items);
+    foreach ($ffs as $ff) {
+        create_media_items($ff[0], $items);
+    }
     $local_tv_obj_group_by_season = group_by('tmpSeason', $items);
     
     $tv_seasons = array();
