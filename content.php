@@ -335,52 +335,44 @@ function tv_show_season_items($local_tv_episodes, $tv_show_name, $tv_show_id, $s
 }
 
 /**
- * Convert a '.srt' file via third party library over to format that our player understands '.vtt'
- * Then create the subtitle object per language.
+ * Convert a '.srt' file via third party library to format that our player understands '.vtt'
+ * Then create the subtitle object per each language.
  * 
  * @param $subfile_file, $dir, $object
  * 
  * @return $object
  */
-// TODO: clean up function! Looks at file ISO639.php out commented code
 function subtitle_entry($subtitle_file, &$object) {
     $iso639 = new Matriphe\ISO639\ISO639;
 
-    //echo "subtitle_file: $subtitle_file\n";
     $search_str = strtolower(substr($subtitle_file, strripos($subtitle_file, '.', -5)));
     $file_ext = substr($subtitle_file, -4);
 
-    foreach ($iso639->allLanguages() as $key => $languages) {
-        $found = false;
-        $clean;
-        if (strpos($search_str, strtolower($languages[4])) !== false) {
-            $clean = substr($search_str, 0, strlen($search_str)-4);
-            $clean = trim(preg_replace("/^[^_]*|".$languages[4]."|_/", ' ', $clean));
-            if ($clean === "" || $clean === strtolower($languages[4])) {
-                $clean = $languages[4];
-            } else {
-                if ($clean[0] !== "[") $clean = "[".$clean."]";
-            }
-            $found = true;
-        } else if (strpos($search_str, strtolower($languages[2])) !== false) {
-            $clean = substr($search_str, 0, strlen($search_str)-4);
-            $clean = trim(preg_replace("/^[^_]*|".$languages[2]."|_/", ' ', $clean));
-            if ($clean === "" || $clean === strtolower($languages[4])) {
-                $clean = $languages[4];
-            } else {
-                if ($clean[0] !== "[") $clean = "[".$clean."]";
-            }
-            $found = true;
-        }
-
-        if ($found) {
-            $object->{sprintf("html5x:subtitle:%s:%s", $languages[0], $clean)} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
+    foreach ($iso639->allLanguages() as $languages) {
+        if (find_correct_language($search_str, $languages)) {
+            $object->{sprintf("html5x:subtitle:%s:%s", $languages[0], $languages[4])} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
             return;
         }
     }
-
-    // odd sub file name, assume it's english
+    // odd sub file name, assume it's English
     $object->{"html5x:subtitle:en:English"} = action_url_encoded("", str_replace($GLOBALS['path'], "", $subtitle_file));
+}
+
+function find_correct_language($search_str, $languages) {
+    for ($i=4; $i > 0; $i -= 2) { 
+        if (strpos($search_str, strtolower($languages[$i])) !== false) {
+            $clean = substr($search_str, 0, strlen($search_str)-4);
+            $clean = trim(preg_replace("/^[^_]*|".$languages[$i]."|_/", ' ', $clean));
+            if ($clean === "" || $clean === strtolower($languages[4])) {
+                $clean = $languages[4];
+            } else {
+                if ($clean[0] !== "[") $clean = "[".$clean."]";
+            }
+            return true;
+        }
+    }
+
+    return false;
 }
 
 function get_directories($dir) {
