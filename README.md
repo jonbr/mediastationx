@@ -4,9 +4,9 @@ This is the server side code for a PHP server for generating JSON for displaying
 Setup
 =====
 In third party file PTN.php line 54 minor modification is needed for parsing to work correctly.\
-* `;array('season' => '(s?([0-9]{1,2}))'),`\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`;array('season' => '(s?([0-9]{1,2}))'),`\
 To reduce warning messages comment out line 101 in third party file ISO639.php\
-* `//array('', '', '', 'lld', 'Ladin', 'ladin, lingua ladina'),`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`//array('', '', '', 'lld', 'Ladin', 'ladin, lingua ladina'),`
 
 to start up http-server and application run `./run.sh`
 
