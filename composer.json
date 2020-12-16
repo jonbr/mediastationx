@@ -1,4 +1,8 @@
 {
+    "name": "jonbr/mediastationx",
+    "description": "Server side code for Media Station X",
+    "keywords": ["Server side code", "expose media files"],
+    "homepage": "https://github.com/jonbr/mediastationx",
     "license": "MIT",
     "authors": [{
         "name": "Jon Masson",
