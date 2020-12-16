@@ -9,7 +9,7 @@ To reduce warning messages comment out line 101 in third party file ISO639.php
     "//array('', '', '', 'lld', 'Ladin', 'ladin, lingua ladina'),"
 
 to start up http-server and application run
-    ./run.is
+    `./run.sh`
 
 Roadmap
 ========
