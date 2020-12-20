@@ -23,6 +23,6 @@
         "phpunit/phpunit": "^9"
     },
     "scripts": {
-        "test": "phpunit test"
+        "test": "vendor/bin/phpunit test"
     }
 }
