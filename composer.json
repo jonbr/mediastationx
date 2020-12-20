@@ -23,6 +23,10 @@
         "phpunit/phpunit": "^9"
     },
     "scripts": {
-        "test": "phpunit test"
+        "test": [
+            "@clearCache",
+            "phpunit test"
+        ],
+        "clearCache": "rm -rf cache/*"
     }
 }
